@@ -1,7 +1,5 @@
 from urllib.error import HTTPError
 import re
-
-__author__ = 'Azen&DK'
 from urllib.request import urlopen
 from bs4 import BeautifulSoup
 
@@ -75,6 +73,7 @@ def navigating_tree():
     """兄弟标签"""
     # next_sibling
     # next_siblings()函数，获取所有此标签后面的兄弟标签
+    # previous_sibling
     for sibling in obj.find("table", {"id":"giftList"}).tr.next_siblings:
         print(sibling)
 
